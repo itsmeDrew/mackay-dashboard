@@ -1,0 +1,54 @@
+input {
+  padding: .75rem 1rem;
+  color: $black;
+}
+
+input[type=submit] {
+  border: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label span {
+  display:inline-block;
+  width:23px;
+  height:23px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  margin-right: 10px;
+  vertical-align:middle;
+  background:coral;
+  cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background: url('../img/sign.png') $coral no-repeat;
+    background-position: center;
+}
+
+select {
+  border: 1px solid $wild-sand;
+  color: $black;
+  height: 30px;
+}
+
+label {
+  display: block;
+  text-transform: capitalize;
+}
+
+.disabled {
+  color: $wild-sand;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+// validation

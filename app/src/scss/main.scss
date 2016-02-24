@@ -1,0 +1,28 @@
+///////////////////////////////
+/// PROJECT MACKAY
+///////////////////////////////
+
+@import '../../../node_modules/font-awesome/scss/font-awesome';
+
+// core
+@import 'core/mixins';
+@import 'core/animations';
+
+// vendor
+@import 'jeet/scss/jeet/index';
+
+// core overrides
+@import 'core/colors';
+@import 'core/variables';
+
+// base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/forms';
+@import 'base/buttons';
+@import 'base/fonts';
+@import 'base/helpers';
+
+// components
+
+@import 'base/layout';
