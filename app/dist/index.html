@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html class="no-js" ng-app="App">
 <head>
-  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard</title>
   <link rel="stylesheet" href="assets/css/main.min.css">
+  <script>
+    var baseRef = "https://project-mackay.firebaseio.com/";
+
+    window.config = {
+      baseRef: baseRef
+    };
+  </script>
 </head>
 
 <body ng-controller="AppCtrl as app">
 
-  <div>
-    <h2>Dashboard</h2>
-  </div>
+  <ul>
+    <li ng-repeat="guest in app.guests">name: {{ guest.firstName }} {{ guest.lastName }}</li>
+  </ul>
 
   <script src="assets/js/main.min.js"></script>
 

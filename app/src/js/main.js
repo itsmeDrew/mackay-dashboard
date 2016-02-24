@@ -8,7 +8,6 @@ require('./templates');
 require('./services/guests');
 
 var app = angular.module('App', [
-  'ui.router',
   'firebase',
   'templates',
   'App.Service.Guests'

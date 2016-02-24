@@ -1,16 +1,24 @@
 'use strict';
 
-var app = angular.module('App.Service.Guests', []);
+var app = angular.module('App.Service.Guests', ['firebase']);
 
 app.service('guestsService', guestsCtrl);
 
-function guestsCtrl () {
+function guestsCtrl ($firebaseObject) {
   var vm = this;
 
   vm.getGuests = getGuests;
 
-  function getGuests() {
-    console.log('guest service');
+  function getGuests(ref) {
+    return $firebaseObject(ref);
+
+    ref.on("child_changed", function(snapshot) {
+      if (snapshot.val()) {
+        return $firebaseObject(ref);
+      } else {
+        return false;
+      }
+    })
   }
 
 };
