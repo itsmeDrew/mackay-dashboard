@@ -16,34 +16,47 @@
 
 <body ng-controller="AppCtrl as app">
 
-  <div class="guest-listing">
-    <div class="guest-listing__header">
-      <div class="guest-listing__col">
-        <span class="guest-listing__label">name</span>
+  <div class="guest-list">
+    <div class="guest-list__container">
+      <div class="guest-list__header">
+        <div class="guest-list__row">
+          <div class="guest-list__col">
+            <span class="guest-list__title">wedding attendance</span>
+          </div>
+          <div class="guest-list__col">
+            <div class="guest-statistics">
+              <i class="guest-statistics__icon fa fa-user"></i>
+              <span class="guest-statistics__label">{{ app.guests.length }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="guest-list__row">
+          <div class="guest-list__col">
+            <span class="guest-list__label">name</span>
+          </div>
+          <div class="guest-list__col">
+            <span class="guest-list__label">drink</span>
+          </div>
+        </div>
       </div>
-      <div class="guest-listing__col">
-        <span class="guest-listing__label">drink</span>
-      </div>
+      <ul class="guest-list__list">
+        <li class="guest-list__list-item" ng-repeat="guest in app.guests">
+          <div class="guest-list__col">
+            <span class="guest-list__name">
+              {{ guest.firstName }} {{ guest.lastName }}
+            </span>
+          </div>
+          <div class="guest-list__col">
+            <span class="guest-list__drink">
+              {{ guest.drink }}
+            </span>
+          </div>
+        </li>
+      </ul>
     </div>
-    <ul class="guest-list">
-      <li class="guest-list__list-item" ng-repeat="guest in app.guests">
-        <div class="guest-listing__col">
-          <span class="guest-listing__name">
-            {{ guest.firstName }} {{ guest.lastName }}
-          </span>
-        </div>
-        <div class="guest-listing__col">
-          <span class="guest-listing__drink">
-            {{ guest.drink }}
-          </span>
-        </div>
-      </li>
-    </ul>
   </div>
 
-  <div>
-    total guests coming: {{ app.guests.length }}
-  </div>
+
 
   <script src="assets/js/main.min.js"></script>
 

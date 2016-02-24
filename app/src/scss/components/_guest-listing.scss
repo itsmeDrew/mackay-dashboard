@@ -1,14 +1,26 @@
 // layout
 
-.guest-listing {
+.guest-list {
   @include center(500px);
   @include boxShadow(0 0 10px rgba(0,0,0,0.1));
   @include font-size(14px);
+  @include cf();
 
+  color: lighten($grey, 10%);
   border: 1px solid #eeeeef;
 }
 
-.guest-listing__col {
+.guest-list__row {
+  @include cf();
+
+  width: 100%;
+  background: #f2f3f6;
+  border-bottom: 1px solid #dedfe4;
+  border-top: 1px solid $white;
+  padding: .5rem 1rem;
+}
+
+.guest-list__col {
   @include col(6/12);
 }
 
@@ -26,32 +38,52 @@
   border-bottom: none;
 }
 
-.guest-listing__header {
+.guest-list__header {
   @include cf();
   @include boxShadow(0px 1px 3px rgba(0,0,0,0.1));
 
-  background: #f2f3f6;
-  border-bottom: 1px solid #dedfe4;
-  border-top: 1px solid $white;
-  padding: .5rem 1rem;
   position: relative;
   z-index: 10;
 }
 
-.guest-listing__label {
+.guest-list__title {
+  @include font-size(14px);
+
+  color: $black;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.guest-list__label {
   @include font-size(11px);
 
-  color: #82899d;
+  color: #525765;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.guest-listing__name {
+.guest-statistics__label {
+  @extend .guest-list__title;
+
+}
+
+.guest-statistics__icon {
+  @extend .guest-list__title;
+
+}
+
+.guest-list__name {
+  color: $black;
   font-weight: bold;
   text-transform: capitalize;
 }
 
-.guest-listing__drink {
-  color: $grey;
+.guest-list__drink {
   text-transform: capitalize;
+}
+
+// footer
+
+.guest-statistics__label {
+  padding: 0 .5rem;
 }
