@@ -16,9 +16,34 @@
 
 <body ng-controller="AppCtrl as app">
 
-  <ul>
-    <li ng-repeat="guest in app.guests">name: {{ guest.firstName }} {{ guest.lastName }}</li>
-  </ul>
+  <div class="guest-listing">
+    <div class="guest-listing__header">
+      <div class="guest-listing__col">
+        <span class="guest-listing__label">name</span>
+      </div>
+      <div class="guest-listing__col">
+        <span class="guest-listing__label">drink</span>
+      </div>
+    </div>
+    <ul class="guest-list">
+      <li class="guest-list__list-item" ng-repeat="guest in app.guests">
+        <div class="guest-listing__col">
+          <span class="guest-listing__name">
+            {{ guest.firstName }} {{ guest.lastName }}
+          </span>
+        </div>
+        <div class="guest-listing__col">
+          <span class="guest-listing__drink">
+            {{ guest.drink }}
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    total guests coming: {{ app.guests.length }}
+  </div>
 
   <script src="assets/js/main.min.js"></script>
 

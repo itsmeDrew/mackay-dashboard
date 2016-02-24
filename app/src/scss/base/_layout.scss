@@ -8,8 +8,9 @@ body {
 
   line-height: $base-line-height;
   font-family: $base-font-family--sans-serif;
-  background-repeat: no-repeat;
+  background-color: #ebedf3;
   display: block;
+  padding: 3rem;
 
   @include breakpointLargerThan($breakpoint--medium) {
     width: 100%;

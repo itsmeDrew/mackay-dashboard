@@ -1,0 +1,57 @@
+// layout
+
+.guest-listing {
+  @include center(500px);
+  @include boxShadow(0 0 10px rgba(0,0,0,0.1));
+  @include font-size(14px);
+
+  border: 1px solid #eeeeef;
+}
+
+.guest-listing__col {
+  @include col(6/12);
+}
+
+// components
+
+.guest-list__list-item {
+  @include cf();
+
+  padding: 1rem;
+  background: $white;
+  border-bottom: 1px solid #eeeeef;
+}
+
+.guest-list__list-item:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.guest-listing__header {
+  @include cf();
+  @include boxShadow(0px 1px 3px rgba(0,0,0,0.1));
+
+  background: #f2f3f6;
+  border-bottom: 1px solid #dedfe4;
+  border-top: 1px solid $white;
+  padding: .5rem 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.guest-listing__label {
+  @include font-size(11px);
+
+  color: #82899d;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.guest-listing__name {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.guest-listing__drink {
+  color: $grey;
+  text-transform: capitalize;
+}
