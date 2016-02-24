@@ -63,12 +63,12 @@
 }
 
 .guest-statistics__label {
-  @extend .guest-list__title;
+  @extend .guest-list__label;
 
 }
 
 .guest-statistics__icon {
-  @extend .guest-list__title;
+  @extend .guest-list__label;
 
 }
 
