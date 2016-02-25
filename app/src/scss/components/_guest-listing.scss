@@ -1,13 +1,21 @@
 // layout
 
 .guest-list {
-  @include center(500px);
-  @include boxShadow(0 0 10px rgba(0,0,0,0.1));
-  @include font-size(14px);
   @include cf();
+  @include boxShadow(0 0 10px rgba(0,0,0,0.1));
 
   color: lighten($grey, 10%);
   border: 1px solid #eeeeef;
+
+  @include breakpointSmallerThan($breakpoint--medium) {
+    @include center(95%);
+    @include font-size(12px);
+  }
+
+  @include breakpointLargerThan($breakpoint--medium) {
+    @include center(500px);
+    @include font-size(14px);
+  }
 }
 
 .guest-list__row {
