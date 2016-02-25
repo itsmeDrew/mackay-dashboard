@@ -21,10 +21,14 @@
 }
 
 .guest-list__col {
-  @include col(6/12);
+  @include col(4/12);
 }
 
 // components
+
+.guest-list {
+  text-transform: capitalize;
+}
 
 .guest-list__list-item {
   @include cf();
@@ -51,7 +55,6 @@
 
   color: $black;
   font-weight: bold;
-  text-transform: capitalize;
 }
 
 .guest-list__label {
@@ -75,11 +78,10 @@
 .guest-list__name {
   color: $black;
   font-weight: bold;
-  text-transform: capitalize;
 }
 
-.guest-list__drink {
-  text-transform: capitalize;
+.guest-list__drink--none {
+  opacity: 0.3;
 }
 
 // footer
